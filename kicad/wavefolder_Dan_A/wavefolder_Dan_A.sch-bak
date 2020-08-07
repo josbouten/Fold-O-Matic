@@ -552,10 +552,6 @@ F 3 "~" H 10600 2550 50  0001 C CNN
 	1    10600 2550
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	9650 2400 2250 2400
-Wire Wire Line
-	2250 2400 2250 2700
 Connection ~ 2250 2700
 $Comp
 L power:GND #PWR0106
@@ -943,4 +939,10 @@ Wire Wire Line
 	2850 3450 2850 4200
 Wire Wire Line
 	10400 2550 10350 2550
+Wire Wire Line
+	9650 2400 9650 2250
+Wire Wire Line
+	9650 2250 2250 2250
+Wire Wire Line
+	2250 2250 2250 2700
 $EndSCHEMATC
