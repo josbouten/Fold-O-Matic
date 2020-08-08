@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 1 1
 Title "WaveFolder (after Dan A)"
 Date "2020-08-07"
-Rev "0.1"
+Rev "0.2"
 Comp "Sculpt-O-Sound"
 Comment1 "Tested Circuit"
 Comment2 ""
@@ -389,17 +389,6 @@ Wire Wire Line
 	3050 3450 2850 3450
 Connection ~ 2850 4200
 $Comp
-L Device:R_POT RV1
-U 1 1 5F2D9866
-P 1900 4050
-F 0 "RV1" H 1831 4096 50  0000 R CNN
-F 1 "100k" H 1831 4005 50  0000 R CNN
-F 2 "" H 1900 4050 50  0001 C CNN
-F 3 "~" H 1900 4050 50  0001 C CNN
-	1    1900 4050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R2
 U 1 1 5F2DA11C
 P 1900 4500
@@ -454,15 +443,15 @@ $EndComp
 Wire Wire Line
 	1900 4650 1900 4850
 $Comp
-L Device:R_POT RV2
+L Device:R_POT Attenuation
 U 1 1 5F2ED488
 P 1350 3650
-F 0 "RV2" H 1281 3696 50  0000 R CNN
+F 0 "Attenuation" H 1281 3696 50  0000 R CNN
 F 1 "100k" H 1281 3605 50  0000 R CNN
 F 2 "" H 1350 3650 50  0001 C CNN
 F 3 "~" H 1350 3650 50  0001 C CNN
 	1    1350 3650
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0103
@@ -695,7 +684,7 @@ L Switch:SW_DPDT_x2 SW1
 U 1 1 5F38E582
 P 6700 3700
 F 0 "SW1" V 6654 3848 50  0000 L CNN
-F 1 "SW_DPDT_x2" V 6745 3848 50  0000 L CNN
+F 1 "timbre" V 6745 3848 50  0000 L CNN
 F 2 "" H 6700 3700 50  0001 C CNN
 F 3 "~" H 6700 3700 50  0001 C CNN
 	1    6700 3700
@@ -727,7 +716,7 @@ L Switch:SW_DPDT_x2 SW1
 U 2 1 5F3F2B00
 P 6700 4950
 F 0 "SW1" V 6654 5098 50  0000 L CNN
-F 1 "SW_DPDT_x2" V 6745 5098 50  0000 L CNN
+F 1 "timbre" V 6745 5098 50  0000 L CNN
 F 2 "" H 6700 4950 50  0001 C CNN
 F 3 "~" H 6700 4950 50  0001 C CNN
 	2    6700 4950
@@ -794,16 +783,11 @@ Wire Wire Line
 	9550 3550 9650 3550
 Connection ~ 8800 3100
 Wire Wire Line
-	9650 2900 9850 2900
-Wire Wire Line
-	9850 2900 9850 3050
-Wire Wire Line
 	9350 3100 9350 2900
 Wire Wire Line
 	9350 2900 9650 2900
-Connection ~ 9650 2900
 Wire Wire Line
-	9650 3200 9650 3550
+	9650 3200 9650 3350
 Connection ~ 9650 3550
 Wire Wire Line
 	9650 3550 10050 3550
@@ -945,4 +929,22 @@ Wire Wire Line
 	9650 2250 2250 2250
 Wire Wire Line
 	2250 2250 2250 2700
+Wire Wire Line
+	9850 3050 9850 3350
+Wire Wire Line
+	9850 3350 9650 3350
+Connection ~ 9650 3350
+Wire Wire Line
+	9650 3350 9650 3550
+$Comp
+L Device:R_POT DC-offset
+U 1 1 5F2D9866
+P 1900 4050
+F 0 "DC-offset" H 1831 4096 50  0000 R CNN
+F 1 "100k" H 1831 4005 50  0000 R CNN
+F 2 "" H 1900 4050 50  0001 C CNN
+F 3 "~" H 1900 4050 50  0001 C CNN
+	1    1900 4050
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
