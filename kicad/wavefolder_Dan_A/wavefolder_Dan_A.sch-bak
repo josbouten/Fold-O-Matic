@@ -846,10 +846,6 @@ Wire Wire Line
 Connection ~ 5100 3350
 Wire Wire Line
 	5100 3350 5200 3350
-Wire Wire Line
-	5500 2950 5900 2950
-Wire Wire Line
-	5900 2950 5900 3100
 Connection ~ 5900 3100
 $Comp
 L Device:R_POT Timbre_2
@@ -862,10 +858,6 @@ F 3 "~" H 5500 4500 50  0001 C CNN
 	1    5500 4500
 	0    1    -1   0   
 $EndComp
-Wire Wire Line
-	5500 4350 5900 4350
-Wire Wire Line
-	5900 4350 5900 4500
 Wire Wire Line
 	5900 4500 5650 4500
 Connection ~ 5900 4500
@@ -887,13 +879,10 @@ $EndComp
 Wire Wire Line
 	5300 2800 5100 2800
 Wire Wire Line
-	5100 2800 5100 3100
+	5100 2800 5100 2950
 Connection ~ 5100 3100
 Wire Wire Line
 	5600 2800 5900 2800
-Wire Wire Line
-	5900 2800 5900 2950
-Connection ~ 5900 2950
 $Comp
 L Sensor_Optical:LDR03 R20
 U 1 1 5F409561
@@ -908,13 +897,10 @@ $EndComp
 Wire Wire Line
 	5350 4200 5100 4200
 Wire Wire Line
-	5100 4200 5100 4500
+	5100 4200 5100 4350
 Connection ~ 5100 4500
 Wire Wire Line
 	5650 4200 5900 4200
-Wire Wire Line
-	5900 4200 5900 4350
-Connection ~ 5900 4350
 $Comp
 L Device:R R11
 U 1 1 5F4179F6
@@ -1120,4 +1106,18 @@ Wire Wire Line
 	4450 4950 4450 5950
 Wire Wire Line
 	8350 3850 8350 6050
+Wire Wire Line
+	5900 2800 5900 3100
+Wire Wire Line
+	5500 2950 5100 2950
+Connection ~ 5100 2950
+Wire Wire Line
+	5100 2950 5100 3100
+Wire Wire Line
+	5900 4200 5900 4500
+Wire Wire Line
+	5500 4350 5100 4350
+Connection ~ 5100 4350
+Wire Wire Line
+	5100 4350 5100 4500
 $EndSCHEMATC

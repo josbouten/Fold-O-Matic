@@ -6,8 +6,8 @@ encoding utf-8
 Sheet 1 1
 Title "WaveFolder (after Dan A)"
 Date "2020-08-07"
-Rev "0.4"
-Comp "Sculpt-O-Sound"
+Rev "0.5"
+Comp "Sculpt-O-Sound by Zaphod B"
 Comment1 "Tested Circuit"
 Comment2 ""
 Comment3 ""
@@ -377,10 +377,10 @@ $EndComp
 Wire Wire Line
 	1900 4650 1900 4850
 $Comp
-L Device:R_POT Attenuation1
+L Device:R_POT Attenuation
 U 1 1 5F2ED488
 P 1350 3650
-F 0 "Attenuation1" H 1281 3696 50  0000 R CNN
+F 0 "Attenuation" H 1281 3696 50  0000 R CNN
 F 1 "100k" H 1281 3605 50  0000 R CNN
 F 2 "" H 1350 3650 50  0001 C CNN
 F 3 "~" H 1350 3650 50  0001 C CNN
@@ -413,17 +413,6 @@ F 1 "Signal In" H 982 2934 50  0000 C CNN
 F 2 "" H 950 2700 50  0001 C CNN
 F 3 "~" H 950 2700 50  0001 C CNN
 	1    950  2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:AudioJack2 J1
-U 1 1 5F2F03F0
-P 900 3250
-F 0 "J1" H 932 3575 50  0000 C CNN
-F 1 "CV In" H 932 3484 50  0000 C CNN
-F 2 "" H 900 3250 50  0001 C CNN
-F 3 "~" H 900 3250 50  0001 C CNN
-	1    900  3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -633,41 +622,10 @@ F 3 "~" H 10200 2550 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	9800 2550 9850 2550
-$Comp
-L Device:R_POT_Dual Wet/Dry1
-U 1 1 5F44AB52
-P 9750 2800
-F 0 "Wet/Dry1" V 9704 2612 50  0000 R CNN
-F 1 "100k" V 9795 2612 50  0000 R CNN
-F 2 "" H 10000 2725 50  0001 C CNN
-F 3 "~" H 10000 2725 50  0001 C CNN
-	1    9750 2800
-	0    1    1    0   
-$EndComp
-Connection ~ 9850 2550
-Wire Wire Line
-	9850 2550 10050 2550
-Wire Wire Line
-	9650 2700 9650 2750
-Wire Wire Line
-	9650 2750 10050 2750
-Wire Wire Line
-	10050 2750 10050 3550
-Wire Wire Line
 	9550 3550 9650 3550
 Connection ~ 8800 3100
 Wire Wire Line
-	9350 3100 9350 2900
-Wire Wire Line
-	9350 2900 9650 2900
-Connection ~ 9650 3550
-Wire Wire Line
-	9650 3550 10050 3550
-Wire Wire Line
 	5200 4950 4450 4950
-Wire Wire Line
-	4450 3450 4450 4950
 $Comp
 L power:GND #PWR0109
 U 1 1 5F4841B4
@@ -755,17 +713,6 @@ F 3 "" H 10400 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10400 2650 10400 2800
-$Comp
-L Device:R_POT_TRIM Gain1
-U 1 1 5F379B9F
-P 9200 3100
-F 0 "Gain1" V 9085 3100 50  0000 C CNN
-F 1 "100k" V 8994 3100 50  0000 C CNN
-F 2 "" H 9200 3100 50  0001 C CNN
-F 3 "~" H 9200 3100 50  0001 C CNN
-	1    9200 3100
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	9200 2950 8800 2950
 Wire Wire Line
@@ -806,13 +753,6 @@ F 3 "~" H 1900 4050 50  0001 C CNN
 	1    1900 4050
 	1    0    0    1   
 $EndComp
-Wire Wire Line
-	9650 3200 9650 3550
-Wire Wire Line
-	9850 3050 9850 2900
-Wire Wire Line
-	9850 2900 9650 2900
-Connection ~ 9650 2900
 $Comp
 L Device:R_POT Timbre_1
 U 1 1 5F371D2A
@@ -1003,11 +943,11 @@ Wire Wire Line
 Wire Wire Line
 	2450 6400 2450 6750
 Wire Wire Line
-	2450 6750 3400 6750
+	2450 6750 3600 6750
 Wire Wire Line
-	3400 6750 3400 6400
+	3600 6750 3600 6400
 Wire Wire Line
-	3400 6400 3350 6400
+	3600 6400 3350 6400
 Connection ~ 3350 6400
 Wire Wire Line
 	3350 6400 3350 6300
@@ -1017,18 +957,9 @@ Wire Wire Line
 	3100 5650 3000 5650
 Connection ~ 3100 5650
 Wire Wire Line
-	3400 5650 3400 5550
-Wire Wire Line
-	3400 5550 3600 5550
-Wire Wire Line
-	3600 5550 3600 5750
-Wire Wire Line
 	2500 5750 3600 5750
-Connection ~ 3400 5550
 Wire Wire Line
-	3400 5550 3400 5400
-Wire Wire Line
-	3650 3350 4650 3350
+	3650 3350 4450 3350
 Wire Wire Line
 	6300 4850 6750 4850
 Wire Wire Line
@@ -1120,4 +1051,58 @@ Wire Wire Line
 Connection ~ 5100 4350
 Wire Wire Line
 	5100 4350 5100 4500
+Wire Wire Line
+	4450 3350 4450 4950
+Connection ~ 4450 3350
+Wire Wire Line
+	4450 3350 4650 3350
+Wire Wire Line
+	9800 2550 10050 2550
+Wire Wire Line
+	9650 2700 9650 3100
+Wire Wire Line
+	9350 3100 9650 3100
+Connection ~ 9650 3100
+Wire Wire Line
+	9650 3100 9650 3550
+$Comp
+L Device:R_POT Wet/Dry
+U 1 1 5F4CF7B3
+P 9650 2550
+F 0 "Wet/Dry" H 9581 2596 50  0000 R CNN
+F 1 "100k" H 9581 2505 50  0000 R CNN
+F 2 "" H 9650 2550 50  0001 C CNN
+F 3 "~" H 9650 2550 50  0001 C CNN
+	1    9650 2550
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_POT Gain
+U 1 1 5F4E4602
+P 9200 3100
+F 0 "Gain" H 9131 3146 50  0000 R CNN
+F 1 "100k" H 9131 3055 50  0000 R CNN
+F 2 "" H 9200 3100 50  0001 C CNN
+F 3 "~" H 9200 3100 50  0001 C CNN
+	1    9200 3100
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3400 5400 3400 5650
+Wire Wire Line
+	3600 5750 3600 5650
+Wire Wire Line
+	3600 5650 3400 5650
+Connection ~ 3400 5650
+$Comp
+L Connector:AudioJack2 J1
+U 1 1 5F2F03F0
+P 900 3250
+F 0 "J1" H 932 3575 50  0000 C CNN
+F 1 "CV DC offset In" H 932 3484 50  0000 C CNN
+F 2 "" H 900 3250 50  0001 C CNN
+F 3 "~" H 900 3250 50  0001 C CNN
+	1    900  3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
